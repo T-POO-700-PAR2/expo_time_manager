@@ -12,7 +12,7 @@ const Teams = () => {
 
   const getTeams = async () => {
     try {
-      const response = await axios.get('/teams');
+      const response = await axios.get('https://time-manager-par2-58868fe31538.herokuapp.com/api/teams');
       setTeams(response.data.data);
     } catch (error) {
       console.error('Error fetching teams', error);
