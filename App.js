@@ -64,7 +64,7 @@ const Logout = ({ navigation }) => {
 
 const DrawerNavigation = () => {
   return (
-    <Drawer.Navigator initialRouteName="Logout">
+    <Drawer.Navigator initialRouteName="Chart">
       <Drawer.Screen name="Working Times" component={WorkingTimes} />
       <Drawer.Screen name="Chart" component={ChartManager} />
       <Drawer.Screen name="Teams" component={Teams} />
