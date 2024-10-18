@@ -12,7 +12,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigation.navigate('ChartManager');  // Naviguer après la connexion
+      navigation.navigate('ChartManager');
     } catch (error) {
       console.error('Login failed:', error);
     }

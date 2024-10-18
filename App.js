@@ -46,12 +46,13 @@ const AuthStack = () => (
   </Stack.Navigator>
 );
 
+
 const Logout = ({ navigation }) => {
   useEffect(() => {
     auth.signOut().then(() => {
       navigation.replace('Login');
     });
-  }, []);
+  }, [navigation]);
 
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -63,7 +64,7 @@ const Logout = ({ navigation }) => {
 
 const DrawerNavigation = () => {
   return (
-    <Drawer.Navigator initialRouteName="WorkingTimes">
+    <Drawer.Navigator initialRouteName="Logout">
       <Drawer.Screen name="Working Times" component={WorkingTimes} />
       <Drawer.Screen name="Chart" component={ChartManager} />
       <Drawer.Screen name="Teams" component={Teams} />
